@@ -1,11 +1,21 @@
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce for more details
 // Don't worry about initialValue at first. You can always add it in later.
 
-function myReduce(arr, callback) {
+function myReduce(array, callback) {
+   	var current = null;
 
-//  CODE INSIDE HERE   //
+	for (var i=0; i < array.length; i++) {
+  	
+  	current = callback(array[i],i,array);
+
+  	current += 1;
+
+  	return array[i];
+  }
 
 }
+
+
 
 /*
  Best if you don't code out here.

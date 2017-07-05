@@ -9,6 +9,15 @@ var myReduce = require('./myReduce');
 
 var numArray = [0,1,10,100,1000];
 
+function myEach(array, callback) {
+  
+  for (var i=0; i < array.length; i++) {
+  	callback(array[i],i,array);
+
+  }
+
+}
+
 
 /* myEach */
 
@@ -18,8 +27,31 @@ var numArray = [0,1,10,100,1000];
  });*/
 
 
+function myMap(array, callback) {
+// naming of new array 
+var newArryay  = [];
+// for loop  (index i is 0, index is less than the array .length plus 1)
+for (var i=0; i < array.length; i++) {
+// callingback origonal array (callback is a function in a function) and putting into a var with new array 
+ newArryay[i] = callback(array[i],i,array);
+ }
+
+ // returning new arryay 
+  return newArryay;
+}
 
 
+function myReduce(arr, callback) {
+
+	for (var i=0; i < array.length; i++) {
+  	callback(array[i],i,array);
+  }
+  	return array[i];
+}
+
+
+/*
+ Best if 
 /* myMap */
 
 /*var input = ["a","b","c"];
